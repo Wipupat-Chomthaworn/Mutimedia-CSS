@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Kanit:wght@300&display=swap" rel="stylesheet">
+<style media="screen">
+		.topp {
+			font-family: 'Cormorant Garamond', serif;
+			font-family: 'Kanit', sans-serif;
+		}
+     	body{
+  			height: 100%;
+  			font-family: Itim;
+  			min-height: 100vh;
+  			display: grid;
+  			background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  			background-size: 400% 400%;
+  			margin: 0 auto;
+		}
+		.title{
+  			color: white;
+  			position: absolute;
+  			top: 50px;
+		}
+		a{
+  			text-decoration: none;
+		}
+		a:hover{
+  			transition: 0.4s;
+  			background-color:rgb(19, 18, 18, 0.8);
+  			color:rgb(255,255,255,0.8);
+		}
+		p{
+  			margin: 0;
+		}
+		img{
+  			max-width: 100%;
+  			max-height:100%
+		}
+		.card{
+  			position: relative;
+  			width: 12.5em;
+		}
+		h3{
+  			color: white;
+		}
+		p{
+  			color: white;
+		}
+		.photo{
+    		display: flex;
+
+  		}
+		.photo img{
+  			width: 2em;
+  			height: 2em;
+  			border-radius: 50%
+
+		}
+		.front .stats {
+  			display: flex;
+  			border: 1px solid red;
+  			justify-content: space-between;
+		}
+		.back{
+  			display: none;
+		}
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+		*{
+  			margin: 0;
+  			padding: 0;
+  			box-sizing: border-box;
+  			font-family: 'Poppins',sans-serif;
+		}
+		body{
+  			display: flex;
+  			min-height: 100vh;
+  			align-items: center;
+  			justify-content: center;
+  			background: black;
+  			position: relative;
+		}
+		::selection{
+  			background:	red;
+  			color: #fff;
+		}
+		.container{
+  			margin-top: 80px;
+  			max-width: 2000px;
+  			width: 100%;
+  			overflow: hidden;
+  			padding: 50px 12px 50px 12px;
+  			background-color: rgb(19, 18, 18); /*ทดสอบๆ*/
+		}
+		.container .main-card{
+  			display: flex;
+  			justify-content: space-evenly;
+  			width: 300%;
+  			transition: 0.8s;
+		}
+		#two:checked ~ .main-card{
+  			margin-left: -100%;
+		}
+		#three:checked ~ .main-card{
+  			margin-left: -200%;
+		}
+		.container .main-card .cards{
+  			width: calc(100% / 2 - 10px);
+  			display: flex;
+  			flex-wrap: wrap;
+  			margin: 0 20px;
+  			justify-content: space-between;
+		}
+		.main-card .cards .card {
+  			width: calc(100% / 5 - 10px);
+  			height: 450px; /*ใส่เพิ่ม*/
+  			border-radius: 5px;
+  			border: 0.5px solid red,;
+  			padding: 30px;
+  			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  			transition: all 0.4s ease;  /* ดีเลย์เด้ง */
+		}
+		.main-card .cards .card:hover{
+  			background: rgb(226,177,236);
+  			background-size: 400% 400%;
+  			position: relative;
+  			animation: change 4s ease-in-out infinite;
+  			border: 0px;
+  			z-index: 2;
+		}
+		/* รูปหมุน*/
+		.main-card .cards .card:hover .img{
+  			transition: all 0.4s ease;
+  			animation: move 3s infinite;
+		}
+		@keyframes move{
+  			0%{transform: rotate(30deg);}
+  			50%{transform: rotate(-30deg);}
+  			100%{transform: rotate(30deg);}
+		}
+		.cards .card .content{
+  			width: 100%;
+  			display: flex;
+  			flex-direction: column;
+  			justify-content: center;
+  			align-items: center;
+  			text-align: center;
+		}
+		.cards .card .background .img{ /*ขอบรูป*/
+  			height: 130px;
+  			width: 130px;
+  			border-radius: 50%;
+  			padding: 3px;
+  			background: red;
+  			margin-bottom: 14px;
+  			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+		}
+		.card .img img{ /*ขอบขาวระหว่างขอบรูปกับรูปโปรไฟล์*/
+  			height: 100%;
+  			width: 100%;
+  			border: 3px solid black;
+  			border-radius: 50%;
+  			object-fit: cover;
+		}
+		.card .background .name{
+  			font-size: 26px;
+  			font-weight: 500px;
+  			color:white;
+  			font-family: Itim;
+  			text-align: center;
+  			text-shadow: 1px 1px black;
+		}
+		.card .background .job{
+  			font-size: 20px;
+  			color: red;
+  			font-family: Itim;
+  			text-align: center;
+  			text-shadow: 1px 1px black;
+		}
+		.card .media-icons{
+  			justify-content: center;
+  			display: flex;
+  			margin-top: 15px;
+		}
+		.media-icons{
+  			margin-bottom: 15em;
+		}
+		.media-icons a{
+  			text-align: center;
+  			line-height: 33px;
+  			height: 35px;
+  			width: 35px;
+  			margin: 0 3px;
+  			font-size: 15px;
+  			color: red;
+  			border-radius: 50%;
+  			border: 1px solid transparent;
+  			background: black;
+  			transition: all 0.3s ease;
+  			border-color: red;
+		}
+		.media-icons a:hover{
+  			color: black;
+  			background-color: red;
+  			border-color: black;
+		}
+		.container .button{
+  			width: 100%;
+  			display: flex;
+  			justify-content: center;
+  			margin: 30px;
+		}
+		.button label{
+  			height: 15px;
+  			width: 15px;
+  			border-radius: 30px;
+  			background: #fff;
+  			margin: 4px;
+  			margin-top: 6em;
+  			cursor: pointer;
+  			transition: all 0.5s ease;
+		}
+		.button label.active{
+  			width: 35px; /*เริ่มต้น*/
+		}
+		#one:checked ~ .button .one{
+  			width: 35px;
+		}
+		#one:checked ~ .button .two{ /* เมื่อเลือกหน้า1ปุ่มหน้าอื่นจะเหลือเท่าไหร่ ตอบ 15px */
+  			width: 15px;
+		}
+		#one:checked ~ .button .three{
+  			width: 15px;
+		}
+		#two:checked ~ .button .one{
+  			width: 15px;
+		}
+		#two:checked ~ .button .two{
+  			width: 35px;
+		}
+		#two:checked ~ .button .three{
+  			width: 15px;
+		}
+		#three:checked ~ .button .one{
+  			width: 15px;
+		}
+		#three:checked ~ .button .two{
+  			width: 15px;
+		}
+		#three:checked ~ .button .three{
+  			width: 35px;
+		}
+		input[type="radio"]{
+  			display: none;
+		}
+		@media (max-width: 768px) {
+  			.main-card .cards .card{
+    			margin: 20px 0 10px 0;
+    			width: calc(100% / 2 - 10px);
+  			}
+		}
+		@media (max-width: 600px) {
+        .main-card .cards .card{
+    			width: 100%;
+  			}
+		}
+		.topp{
+  			border: 1px solid red;
+  			height: 900px;
+  			width: 100%;
+  			border: 0;
+		}
+		.toplist{
+  			text-align: center;
+		}
+		ul{
+  			padding-top: 1em;
+		}
+		li a{
+  			text-decoration: none;
+  			display: block;
+  			padding: 1em;
+  			color:white;
+  			font-family: 'Cormorant Garamond', serif;
+  			font-family: 'Kanit', sans-serif;
+  			font-family: 'Ubuntu Condensed', sans-serif;
+		}
+		li{
+  			display: inline-block;
+  			padding-right: 2em;
+  			float: left;
+		}
+		ul img{
+  			width: 3em;
+  			height: 4em;
+		}
+		.Head{
+  			background-color: black;
+  			height: 80px;
+		}
+		.allphoto{
+  			border: 1px solid green;
+  			position: absolute;
+  			float: left;
+  			top: 3.9em;
+  			width: 100%;
+  			height: 40%;
+  			margin: 0;
+  			padding: 0;
+		}
+		.top{
+  			background-image: url(https://cdn.discordapp.com/attachments/934158360150949958/934535993611149392/squid_game_.png);
+  			background-size: cover;
+  			background-position: center center;
+  			background-repeat: no-repeat;
+  			color: white;
+  			object-fit: contain;
+  			width: 100%;
+  			height: 900px;
+  			image-resolution: from-image 300dpi
+		}
+		.contents{
+  			margin-left: 30px;
+  			padding-top: 400px;
+  			height: 500px;
+		}
+
+		body{
+  			align-self: right;
+  			margin: 0;
+		}
+
+		li .square{
+  			width: 5.3em;
+  			height: 5.5em;
+  			margin-top: -10px;
+  			margin-left: 10px;
+		}
+		li .square1{
+   		width: 3em;
+  			height: 3em;
+		}
+
+		li.right { float:right;}
+
+		li a{
+  			font-family: 'Cormorant Garamond', serif;
+  			font-family: 'Kanit', sans-serif;
+  			font-weight: bold;
+		}
+
+		.background{
+  			height: 100%;
+  			background-size: cover;
+  			background-position: center;
+  			background-repeat: center;
+  			top: 0;
+  			bottom: 0;
+  			right: 0;
+  			left: 0;
+  			z-index: -1;
+  			transition: 500ms;
+  			transform: scale(1.5);
+  			opacity: 0;
+  			border: 2px solid;
+		} 
+		.back{
+  			border: 1px solid red;
+  			position: absolute;
+  			opacity: 0;
+  			bottom: 0;
+  			right: 0;
+  			left: 0;
+  			width: 400%;
+  			height: 50%;
+		}
+		.main-card .cards .card:hover .background{ 
+  			transition: 300ms;
+  			transform: scale(1.4);
+  			border: 1px solid red;
+  			opacity: 1;
+  			border-radius: 5px;
+  			justify-content: center;
+  			position: relative;
+		}
+
+		.main-card .cards .card:hover .content{
+  			opacity: 0; 
+		}
+		.main-card .cards .card:hover .back{
+  			opacity: 1; 
+		}
+		.main-card .cards .card:hover .background .info{
+  			color: white;
+		}
+		.info{
+  			position: relative;
+  			top: 20px;
+  			height: 100%;}
+		#card-1{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934365664087511080/Reply-.png);
+  			background-size: 100% 100%;
+		}
+		#back-1{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934483466958012436/Reply-_1.png);
+  			background-size: 100% 100%;
+		}
+		#card-2{
+  			background: url(https://media.discordapp.net/attachments/932854377918631987/934489350916436008/-.png);
+  			background-size: 100% 100%;
+		}
+		#back-2{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934491833097134080/pure-blur.png);
+  			background-size: 100% 100%;
+		}
+		#card-3{
+  			background: url(https://cdn.discordapp.com/attachments/934357529033596938/934652520075235409/game_of_don.png);
+  			background-size: 100% 100%;
+		}
+		#back-3{
+  			background: url(https://cdn.discordapp.com/attachments/934357529033596938/934656349890031646/game_of_doll.jpg);
+  			background-size: 100% 100%;
+		}
+		#card-4{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934364586608578650/The-nun-.png);
+  			background-size: 100% 100%;
+		}
+		#back-4{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934459404361797662/The-nun-_1.png);
+  			background-size: 100% 100%;
+		}
+		#card-5{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934364886690037760/rezero-.png);
+  			background-size: 100% 100%;
+		}
+		#back-5{
+  			background: url(https://cdn.discordapp.com/attachments/386705410335309826/934509556128698478/Untitled_AdobeCreativeCloudExpress.gif);
+  			background-size: 100% 100%;
+		}
+		#card-6{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934541047688736788/of_the_rings.png);
+  			background-size: 100% 100%;
+		}
+		#back-6{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934670321057935380/of_the_rings_1.png);
+  			background-size: 100% 100%;
+  
+		}
+		#card-7{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934365825329147934/interstellar-.png);
+  			background-size: 100% 100%;
+		}
+		#back-7{
+  			background: url(https://cdn.discordapp.com/attachments/934094889669492766/934456324031393812/interstellar-b.jpg);
+  			background-size: 100% 100%;	
+		}
+		#card-8{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934366021144424518/martain-.png);
+  			background-size: 100% 100%;
+		}
+		#back-8{
+  			background: url(https://cdn.discordapp.com/attachments/916293667537420288/934457576878403614/martain-_1_1.png);
+  			background-size: 100% 100%;
+		}
+		#card-9{
+  			background: url(https://media.discordapp.net/attachments/798774842765082656/934678676837109811/hr_John_Wick_2.jpg?width=453&height=671);
+  			background-size: 100% 100%;
+		}
+    	#back-9{
+  			background: url(https://cdn.discordapp.com/attachments/798774842765082656/934465863107625021/output-onlinegiftools.gif);
+  			background-size: 100% 100%;
+  
+		}
+		#card-10{
+  			background: url(https://cdn.discordapp.com/attachments/933698238693900349/934489722967961620/MULTI.png);
+  			background-size: 100% 100%;
+		}
+		#back-10{
+  			background: url(https://media.giphy.com/media/umh24MvNmRCBq/giphy.gif);
+  			background-size: 100% 100%; 
+		}
+		#card-11{
+  			background: url(https://media.discordapp.net/attachments/932854377918631987/934456594111021116/Untitled-1.jpg?width=450&height=676);
+  			background-size: 100% 100%;
+		}
+		#back-11{
+  			background: url(https://i.pinimg.com/originals/18/9a/d7/189ad74f9d8093a8eb4e148d5ffe3737.gif);
+  			background-size: 100% 100%;
+		}
+		#card-12{
+  			background: url(https://media.discordapp.net/attachments/711924376731254844/934519452702232656/Untitled-1.png);
+  			background-size: 100% 100%;
+		}
+		#back-12{
+  			background: url(https://i.gifer.com/1RP.gif);
+  			background-size: 100% 100%;
+		}
+		#card-13{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934364086840459274/fast-.png);
+  			background-size: 100% 100%;
+		}
+		#back-13{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934673550395187270/fast-_1.png);
+  			background-size: 100% 100%; 
+  		}
+		#card-14{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934674242157559848/jurasic-.png);
+  			background-size: 100% 100%;
+		}
+		#back-14{
+  			background: url(https://cdn.discordapp.com/attachments/932854377918631987/934674399683043378/jurasic-_1.png);
+  			background-size: 100% 100%;
+  
+		}
+		#card-15{
+  			background: url(https://media.giphy.com/media/C9x8gX02SnMIoAClXa/giphy-downsized-large.gif);
+  			background-size: 100% 100%;
+		}
+		#back-15{
+  			background: url(https://media.giphy.com/media/aFTt8wvDtqKCQ/giphy.gif);
+  			background-size: 100% 100%; 
+		}
+		.intro{
+  			margin: 10px;
+  			text-align: center;
+  			color:white;
+  			background: black;
+  			height: 100px;
+  			justify-content: center; 
+  			display:flex; 
+  			align-items: center; 
+  			border-radius: 8px; 
+  			background-color: rgba(0, 0, 0, 0.8);
+  			font-size: 12px;
+		}
+		.head-img{
+  			height: 100px;
+  			width: 100px;
+  			position: absolute;
+  			filter: drop-shadow(1px 1px 1px black);
+  			top: -1.6em;
+  			right: -1.6em;
+		}
+		.details{
+  			background:rgba(1,1,1,0.2);
+  			padding: 25px;
+  			font-family: 'Cormorant Garamond', serif;
+			font-family: 'Kanit', sans-serif;   
+		}
+		.nickname{
+  			font-size: 30px;
+  			font-style: italic;
+  			text-shadow: 1px 1px black;
+  			font-weight: 900;
+  			color: #ffffff;
+  			padding: 0;
+  			border: 0;
+  			margin: 0;
+		}
+		.realname{
+  			font-size: 15px;
+  			padding-bottom: 10px;
+  			color: red;
+  			text-shadow: 1px 1px black;
+  			font-style: italic;
+  			font-weight: 900;
+		}
+		.kumkom{
+  			padding: 5px;
+  			font-size: 12px;
+  			font-weight: 900;
+  			font-family: 'Kanit', sans-serif;
+  			text-shadow: 1px 1px black;
+  			color: #ffffff;
+		}
+		hr{
+  			width: 120px;
+  			border: 1.2px solid #949292;
+  			border-radius: 8px; 
+			background: #949292;
+		}
+		.double-quote{
+  			font-size: 14px;
+  			font-style: italic;
+  			text-shadow: 1px 1px black;
+		}
+     .banner{
+  			margin-left: 100em;
+  			margin-top: 12em;
+       	filter: drop-shadow(2px 2px 1px black);
+		}
+	</style>
+<link rel="icon" href="https://cdn.discordapp.com/attachments/932854377918631987/934459922500968448/Kwanflix_Icon.png" type="image/x-icon">
+</head>
+<body>
+<div>
+<div class="topp">
+<div class="Head">
+<ul class="toplist">
+<li><img class="square" src="https://cdn.discordapp.com/attachments/933698238693900349/934731814411587594/kWanflixnobg.png" alt=""></li>
+
+<li><a href="https://www.facebook.com/groups/1277304316123925" target="_blank">กลุ่มเฟซบุ๊ก</a></li>
+<li><a href="https://airtable.com/shr0CbMdqegESHh6U/tblOtF3F8M7Ekz6DG" target="_blank">รวมแต้มบุญ</a></li>
+<li><a href="https://airtable.com/shrfTHLm43skk58Ds/tblAp6tfEWiay7LI5" target="_blank">เช็คการ์ด</a></li>
+<li><a href="https://onlearn.it.kmitl.ac.th/course/view.php?id=981" target="_blank">Onlearn</a></li>
+<li><a href="https://discord.com/channels/929730635961094234" target="_blank">Discord</a></li>
+<li class="right"><img class="square1" src="https://ih0.redbubble.net/image.618369215.1083/flat,1000x1000,075,f.u2.jpg" alt=""></li>
+</ul>
+</div>
+<div class="top">
+<div class="contents">
+<div class="banner">
+<img src="https://cdn.discordapp.com/attachments/932854377918631987/934481949878284349/C-kwan.png" alt="">
+</div>
+<div class="sup">
+</div>
+</div>
+</div>
+</div>
+<div class="bottom">
+<div class="container">
+<input type="radio" name="dot" id="one">
+<input type="radio" name="dot" id="two">
+<input type="radio" name="dot" id="three">
+<div class="main-card">
+<div class="cards">
+<div class="card" id="card-1">
+<div class="background" id="back-1">
+<div class="info" id="info-1">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://scontent.fbkk12-3.fna.fbcdn.net/v/t1.15752-9/269696180_611687319939575_4948276523791184846_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeFB9snz1l5T8RLN4T5Ov9cPB2s3Id4GL_8Hazch3gYv_zf380aDcToKulvasNooYvB-cnPer4o1NPmsYlCbXzxR&_nc_ohc=CMSbUpzSEh4AX_UNkJK&_nc_ht=scontent.fbkk12-3.fna&oh=03_AVJA99MCkxz1_1vsuxoZJ3ifFacYNgWcmVx1sIWp951ENg&oe=62125FCD" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+P'kwan
+</h1>
+<h2 class="realname">
+Siriporn Jongjit
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>ตี้สุดจ๊าบ นำโดยพี่ขวัญ<span class="double-quote">"</span>
+</p>
+ </div>
+<div class="media-icons">
+<a href="https://www.facebook.com/srpkwan" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/aprilfoolk/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="card" id="card-2">
+<div class="background" id="back-2">
+<div class="info" id="info-2">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://cdn.discordapp.com/attachments/932854377918631987/934489350916436008/-.png" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Pure
+</h1>
+<h2 class="realname">
+Punnaporn Jungpiumsuk
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>การนอนคือสิ่งสำคัญ และการนอนก็เช่นกันที่สำคัญเหมือนกัน<span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/punnaporn.jungpiumsuk" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://twitter.com/monkey_erup?t=r0X2zXtNTzSu8lo6zg2v3Q&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+<a href="https://www.instagram.com/pure_jps/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://youtube.com/playlist?list=PLbopS7RBSxlBK_krq7R7RGx96nnokNSr-" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="card" id="card-3">
+<div class="background" id="back-3">
+<div class="info" id="info-3">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://media.discordapp.net/attachments/934357529033596938/934660759630258286/unknown.png" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Doll
+</h1>
+<h2 class="realname">
+Phattachal Therbjanthuek
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>On stage must do the best.<span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/doll.rck" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/doll_tjt/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" id="card-4">
+<div class="background" id="back-4">
+<div class="info" id="info-4">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://media.discordapp.net/attachments/886594531615707207/934708054153392128/1.png?width=641&height=586" alt="">
+ </div>
+<div class="details">
+<h1 class="nickname">
+Earn
+</h1>
+<h2 class="realname">
+Anchisa Cherdsattayanukul
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span> อาการไอมันเจ็บคอ แต่อาการรอเธอมันเจ็บใจ
+เราไม่ใช่นักเลงติดยา แต่เราเป็นคนธรรมดาที่ติดเธอ
+<span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/pimpicha.alaa.1/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/an.chisaa/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" id="card-5">
+<div class="background " id="back-5">
+<div class="info" id="info-5">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://cdn.discordapp.com/attachments/934066331920252968/934067305913131088/IMG_20200906_215435_041.jpg" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Oak
+</h1>
+<h2 class="realname">
+Yongsin Limwilaikul
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>ถ้าหากคุณไม่มีผม คุณก็จะหัวโล่น<span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/oak.yongsin.9/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/lloakkkkkll/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.youtube.com/watch?v=vcw5THyM7Jo" target="_blank"><i class="fab fa-youtube"></i></a>
+<a href="https://line.me/ti/p/W9JdG_r5Fh" target="_blank"><i class="fab fa-line"></i></a>
+<a href="https://steamcommunity.com/id/oakhaku/" target="_blank"><i class="fab fa-steam"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="cards">
+<div class="card" id="card-6">
+<div class="background" id="back-6">
+<div class="info" id="info-6">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://scontent.fbkk13-2.fna.fbcdn.net/v/t1.6435-9/84702793_532551314324929_4200502153204203520_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGBQTeuR4x2Brixlxry_1jecKb52xvJx7NwpvnbG8nHs5tmbTVwZMiKvAbanAUmvFUBRCCbquZHRdh0kkwQK-ha&_nc_ohc=kR59ZzjulA0AX-96xnk&_nc_oc=AQksltghdBnpk7qvqIFg97sFHaqF7YGl0uAc4aphI3GNc4D1SlGIZk1OYxjf-78EDrQDdb-n3Ybl4tT2viVO5gOl&_nc_ht=scontent.fbkk13-2.fna&oh=00_AT-hctNq9jUZB-zTJWXqlC-iS77h-qXRIJxhHZMehv-SEg&oe=6212F73D" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Gong
+</h1>
+<h2 class="realname">
+Aphiwit Romphoyai
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>เรียนมาตั้งนาน ถนัดอยู่อย่างเดียว คือถนัดขวา<span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/aphiwit.romphoyai?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" id="card-7">
+<div class="background" id="back-7">
+<div class="info" id="info-7">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://cdn.discordapp.com/attachments/934079163193753650/934080869340164106/1642772624981.jpg" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Aun
+</h1>
+<h2 class="realname">
+Pakin keratipugdepong
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>อย่าทำวันนี้ให้ดีที่สุด เดี๋ยวพรุ่งนี้ไม่มีอะไรทำ<span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/aun.pakin.45/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/aun_pakin.k/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" id="card-8">
+<div class="background" id="back-8">
+<div class="info" id="info-8">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://cdn.discordapp.com/attachments/916293667537420288/934461420991561776/IMG_0974-modified.png" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Gear
+</h1>
+<h2 class="realname">
+Vorawee wirawan
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>มองรูปผมให้ชินก่อนนะ เดี๋ยวตอนนั่งสบตาจะได้ไม่เขิน <span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/profile.php?id=100008401099016" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/gearkiskee/" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" id="card-9">
+<div class="background" id="back-9">
+<div class="info" id="info-9">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://scontent.fbkk6-2.fna.fbcdn.net/v/t1.6435-9/99070534_250636259532636_246859095083057152_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=174925&_nc_eui2=AeG-XEecTWLyyCj-RgP_z_CogqLiuuq56eeCouK66rnp5_xne_gKOgOMaib3k5pY3jDuxvnWGWBvW5PJ9XYwlqL9&_nc_ohc=FYC8qpzImg8AX8B8Kc8&tn=Rx33knUWMJ1OeNvP&_nc_ht=scontent.fbkk6-2.fna&oh=00_AT8pyGChO69YL4IUGkEiQS8l6g7dZnr7y9mRc1S9vsRyTw&oe=62131587" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Mai
+</h1>
+<h2 class="realname">
+Sahadsawat Boonphuen
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>Do, or do not. there is no "Try"<span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/profile.php?id=100037587902079" target="_blank"><i class="fab fa-facebook-f" target="_blank"></i></a>
+<a href="https://www.instagram.com/maiifuckallenemies/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.youtube.com/watch?v=8GmyBn3-A9E" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" id="card-10">
+<div class="background" id="back-10">
+<div class="info" id="info-10">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://scontent.fbkk2-8.fna.fbcdn.net/v/t1.6435-9/159340979_2459271107553001_1046706932077474546_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEKOSIhWYe54J4XZCk_KQDtHBsPRpJ2zmwcGw9GknbObCBjtFsDAXsVIdQqA-7yS9XllfVFgVZowSY1VkZ5abxu&_nc_ohc=G7Vpj3kFccoAX-hcMjk&_nc_ht=scontent.fbkk2-8.fna&oh=00_AT8uFUHzUDC4Y44H7TttcXyBVwIT_W_fRCob80GbXTRoZg&oe=621240E6" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Au
+</h1>
+<h2 class="realname">
+Sanpich Phoolsilp
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>Never Send A Human To Do A Machine's Job.<span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/sanpis.oau/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/sanpich_au/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.youtube.com/watch?v=kxgj5af8zg4" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="cards">
+
+<div class="card" id="card-11">
+<div class="background" id="back-11">
+<div class="info" id="info-11">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://media.discordapp.net/attachments/915456227247550505/934650129821085726/IMG20210919140702.jpg?width=1202&height=676" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Kay
+</h1>
+<h2 class="realname">
+Ronnachai Srisangwarn
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>Nyan! Nyanpasu!!<span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/kaykaedesu/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+ <a href="https://www.instagram.com/soiwillbeacuteanimegirlthen/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.youtube.com/channel/UCgf7De7hYW-C4b_eeRe1Zmg" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" id="card-12">
+<div class="background" id="back-12">
+<div class="info" id="info-12">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://media.discordapp.net/attachments/934040855008907295/934055295636873217/IMG_8276.jpg?width=527&height=701" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Time
+</h1>
+<h2 class="realname">
+Wachirawit Prangnawarat
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>กร๊อบแกร๊บ กรุบ ๆ ผมชอบกินทาโร่ครับ <span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/schzFF/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.youtube.com/channel/UC8bHtM7-aeXOZHX_dpJRYMQ/featured" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" id="card-13">
+<div class="background" id="back-13">
+<div class="info" id="info-13">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://scontent.fbkk12-4.fna.fbcdn.net/v/t39.30808-6/217400845_2205900129546012_8891064616918628072_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFBxsPqE7GSvFSAtoL2Lw-AAixqUE_2u2sCLGpQT_a7a9QwEYjlvv0FQKSn-ygPJP17ohA4qqyKzo0rrgbVusRT&_nc_ohc=dc_3UvuYMY4AX-v_ns3&tn=758qaztSlHitkKdx&_nc_ht=scontent.fbkk12-4.fna&oh=00_AT_CZqaX1TRqrrwwRR0c-FDGJfR5bXce2jAzSMXk9bsjWg&oe=61F2068F" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Meen
+</h1>
+<h2 class="realname">
+Pichaya Loha
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span> Don't give up on your dreams,Keep sleeping. <span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/meenza555" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href=" https://www.instagram.com/meenmeen27/ " target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" id="card-14">
+<div class="background" id="back-14">
+<div class="info" id="info-14">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://scontent.fbkk12-2.fna.fbcdn.net/v/t1.6435-9/131579656_1697311627136962_4983759432593705064_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEHWMKHHFI656LxXNx_DLKEu4cq75q2BmW7hyrvmrYGZUH5ur11NLigSNAcEesBrNYWueuoxT13Iw1AN8sqEASu&_nc_ohc=FmoAMNaU9DUAX-MgV7W&tn=758qaztSlHitkKdx&_nc_ht=scontent.fbkk12-2.fna&oh=00_AT-jls6P3Jawc0zyfufhCN9gS7RElE4de-OWOrM4IGm5cw&oe=6212339C" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Tian
+</h1>
+<h2 class="realname">
+Siwanart Worasaksirikun
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>Do I run? Yes, Out of time, patients and money...<span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://www.facebook.com/profile.php?id=100005744225919" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.youtube.com/channel/UCRluJsdGtFw9wEsXg0j239g" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" id="card-15">
+<div class="background" id="back-15">
+<div class="info" id="info-15">
+<div class="head-img">
+<img src="https://media.discordapp.net/attachments/932854377918631987/934481949878284349/C-kwan.png">
+</div>
+<div class="img">
+<img src="https://media.discordapp.net/attachments/897853436937240607/933698012159574016/121273987_350704072904867_8432927381013372363_n.jpg" alt="">
+</div>
+<div class="details">
+<h1 class="nickname">
+Coming soon...
+</h1>
+<h2 class="realname">
+Coming soon...
+</h2>
+<hr>
+<p class="kumkom">
+<span class="double-quote">"</span>Coming soon...<span class="double-quote">"</span>
+</p>
+</div>
+<div class="media-icons">
+<a href="https://youtu.be/mPZKfdRGAq4" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://youtu.be/Jb9Ebe_rA8M" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="button">
+<label for="one" class="active one"></label>
+<label for="two" class="two"></label>
+<label for="three" class="three"></label>
+</div>
+</div>
+</body>
+</html>

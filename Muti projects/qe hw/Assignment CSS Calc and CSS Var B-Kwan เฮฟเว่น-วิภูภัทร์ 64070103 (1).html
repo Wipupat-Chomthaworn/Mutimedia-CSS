@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>64070103 Heaven-Wipupat</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap');
+        body {
+            --bg: url("https://cdn.pixabay.com/photo/2015/11/03/15/58/minecraft-1021046_1280.png");
+            --boxspace: 0px;
+            --borderradius: 0;
+            --box-rotate: 1;
+            --speed: 8s;
+            --spletter:0px;
+            background-color: rgb(210, 218, 203);
+            background-image: var(--bg);
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            height: 100vh;
+
+        }
+
+        .botton1 {
+            color: green;
+            font-weight: bold;
+          font-family: 'Prompt', sans-serif;
+
+        }
+
+        h1[class~="n"] {
+            color: black;
+          	padding-left: 5px;
+            text-align: center;
+            color: #000;
+            width: 100%;
+            font-family: 'Prompt', sans-serif;
+            font-weight:400;
+            margin: auto;
+          	letter-spacing: var(--spletter);
+            background-color: hsla(60, 80%, 79%);
+        }
+
+        .botton1:hover {
+            background-color: hsla(30, 100%, 80%);
+        }
+
+        .tools {
+            padding: 15px;
+            font-family: 'Prompt', sans-serif;
+            font-weight: bold;
+          
+        }
+
+        .wrapper {
+            position: absolute;
+            background-color: rgb(21, 155, 155);
+            top: 50%;
+            left: 50%;
+            perspective: 1500px;
+            transform: translatey(50px);
+            
+        }
+
+        .box-space {
+            position: relative;
+            transform-style: preserve-3d;
+
+            animation: rotate var(--speed) linear infinite;
+            
+        }
+
+        .box {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            
+        }
+
+        .box-front {
+            background-image: url("https://www.tynker.com/minecraft/api/block?id=5728adb01ae7a9890f8b4578&w=400&h=400&width=400&height=400&mode=contain&format=jpg&quality=75&cache=max&v=1462283696");
+            transform: translateX(-150px) translateY(-150px) translateZ(calc(var(--boxspace) + 150px));
+            /* animation: rotate 5s linear infinite; */
+            background-size: cover;
+            align-items: center;
+            border-radius: var(--borderradius);
+        }
+
+        .box-left {
+            /* transform:translate(100px,-100px); */
+            background-image: url("https://www.tynker.com/minecraft/api/block?id=5728adb01ae7a9890f8b4578&w=400&h=400&width=400&height=400&mode=contain&format=jpg&quality=75&cache=max&v=1462283696");
+            transform: translateY(-150px) translateX(-300px) rotateY(90deg) translateZ(calc(var(--boxspace)*(-1)));
+            background-size: cover;
+            align-items: center;
+            /* animation: rotate 5s linear infinite; */
+            border-radius: var(--borderradius);
+        }
+
+        .box-right {
+            /* transform:translate(100px,-100px); */
+            background-image: url("https://www.tynker.com/minecraft/api/block?id=5728adb01ae7a9890f8b4578&w=400&h=400&width=400&height=400&mode=contain&format=jpg&quality=75&cache=max&v=1462283696");
+            transform: translatey(-150px) rotatey(90deg) translateZ(calc(var(--boxspace)));
+            /* animation: rotate 5s linear infinite; */
+            background-size: cover;
+            align-items: center;
+            border-radius: var(--borderradius);
+        }
+
+        .box-back {
+            /* transform:translate(100px,-100px); */
+            background-image: url("https://www.tynker.com/minecraft/api/block?id=5728adb01ae7a9890f8b4578&w=400&h=400&width=400&height=400&mode=contain&format=jpg&quality=75&cache=max&v=1462283696");
+            transform: translateX(-150px) translateY(-150px) translateZ(calc(var(--boxspace)*(-1) + -150px));
+            /* animation: rotate 5s linear infinite; */
+            background-size: cover;
+            align-items: center;
+            border-radius: var(--borderradius);
+        }
+
+        .box-top {
+            /* transform:translate(100px,-100px); */
+            background-image: url("https://media.forgecdn.net/avatars/155/239/636631311418559346.png");
+            transform: translateX(-150px) translateY(calc(var(--boxspace)*(-1) + -300px)) rotateX(90deg);
+            /* animation: rotate 5s linear infinite; */
+            background-size: cover;
+            align-items: center;
+            border-radius: var(--borderradius);
+        }
+
+        .box-bottom {
+            /* transform:translate(100px,-100px); */
+            background-image: url("https://media.forgecdn.net/avatars/155/239/636631311418559346.png");
+            transform: translateX(-150px) translateY(calc(var(--boxspace))) rotateX(90deg);
+            background-size: cover;
+            align-items: center;
+            /* animation: rotate 5s linear infinite; */
+            border-radius: var(--borderradius);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate3d(0, 0, 0, 0deg);
+            }
+
+            100% {
+                transform: rotate3d(var(--box-rotate), var(--box-rotate), var(--box-rotate), 360deg);
+            }
+        }
+
+        /*         @keyframes clor {
+            from{color:rgb(7, 115, 187)}
+            to{color:rgb(0, 0, 0)}
+        } */
+    </style>
+</head>
+<body>
+<h1 class="n">64070103 เฮฟเว่น - วิภูภัทร์ ชมถาวร</h1>
+<div class="tools">
+<span>SLIDE TO UNBOX
+</span>
+<input type="range" id="boxspace" min="-200" max="120" step="10" oninput="changevarinboxspace()">
+<span>ทำให้กลม
+</span>
+<input type="range" id="borderradius" min="0" max="150" step="10" oninput="changeborderradius()">
+<button type="button" id='inroatate' class="botton1" onclick='boxrotate()'>INVERT ROTATE!</button>
+<button type="button" id='bg' class="botton1" onclick='changebg()'>CHANGE BACKGROUND!</button>
+</div><div class="tools">
+<span>ระยะห่างระหว่างอักษร</span>
+<input type="number" id="spaceletter" min="0" max="20" step="1" oninput="changespaceletter()">
+</div>
+<div class="wrapper">
+<div class="box-space">
+<div class="box box-front"></div>
+<div class="box box-right"></div>
+<div class="box box-left"></div>
+<div class="box box-back"></div>
+<div class="box box-top"></div>
+<div class="box box-bottom"></div>
+</div>
+</div>
+<script>
+            var boxspace = document.getElementById("boxspace");
+            var borderradius = document.getElementById("borderradius");
+            var ro = 1;
+            var speed = document.getElementsByClassName("body");
+            var countbg = 0;
+            var spaceletter = document.getElementById("spaceletter")
+            // var boxrotate = document.getPropertyvalue('--box-rotate');
+            var body = document.querySelector("body");
+            function changevarinboxspace() {
+                body.style.setProperty("--boxspace", boxspace.value + "px")
+                console.log("sp" + boxspace.value)
+            }
+            function changeborderradius() {
+                body.style.setProperty("--borderradius", borderradius.value + "px")
+                console.log("br" + borderradius.value)
+            }
+            function boxrotate() {
+                body.style.setProperty("--box-rotate", ro * (-1))
+                ro = ro * (-1);
+                console.log("ro" + ro * (-1))
+            }
+            function changebg() {
+
+                if (countbg == 0) {
+                    body.style.backgroundImage = "url('https://wallpapercave.com/wp/wp5820083.jpg')";
+                    countbg += 1;
+                }
+                else if (countbg == 1) {
+                    body.style.backgroundImage = "url('https://wallpapercave.com/wp/wp5820067.png')";
+                    countbg += 1;
+                }
+                else if (countbg == 2) {
+                    body.style.backgroundImage = "url('https://i.imgur.com/jVImNUI.png')";
+                    countbg += 1;
+                }
+                else if (countbg > 2) {
+                    body.style.backgroundImage = "url('https://cdn.pixabay.com/photo/2015/11/03/15/58/minecraft-1021046_1280.png')";
+                    countbg = 0;
+                }
+
+
+                console.log("bg changed");
+            }
+
+				function changespaceletter() {
+                body.style.setProperty("--spletter", spaceletter.value + "px")
+                console.log("sp" + spaceletter.value)
+            }
+        </script>
+</body>
+</html>

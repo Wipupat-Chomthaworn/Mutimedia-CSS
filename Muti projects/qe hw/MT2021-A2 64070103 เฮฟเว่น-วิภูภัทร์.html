@@ -1,0 +1,335 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=IBM+Plex+Sans+Thai+Looped:wght@400;600&family=Noto+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+<title>Let's Start
+    </title>
+<style>
+      /*
+      font-family: 'Chonburi', cursive;
+      font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+      font-family: 'Noto Sans Thai', sans-serif; 
+      */
+      body{
+        --ci1:hsl(32, 52%, 67%);
+        --ci2:hsl(97, 18%, 53%);
+        --ci3:hsl(224, 38%, 59%);
+        --ci4:hsl(47, 11%, 15%);
+        --ci5:hsl(29, 41%, 42%);
+        --ci6:hsl(198, 11%, 83%);
+        
+        background:var(--ci6);
+        margin:0;
+        font-family:sans-serif;
+        color:var(--ci3);
+        font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+      }
+      .bg-ci1{
+        background-color:var(--ci1) !important}
+      .bg-ci2{
+        background-color:var(--ci2) !important}
+      .bg-ci3{
+        background-color:var(--ci3) !important}
+      .bg-ci4{
+        background-color:var(--ci4) !important}
+      .bg-ci5{
+        background-color:var(--ci5) !important}
+      .bg-ci6{
+        background-color:var(--ci6) !important}
+      .cl-ci1{
+        color:var(--ci1) !important}
+      .cl-ci2{
+        color:var(--ci2) !important}
+      .cl-ci3{
+        color:var(--ci3) !important}
+      .cl-ci4{
+        color:var(--ci4) !important}
+      .cl-ci5{
+        color:var(--ci5) !important}
+      .cl-ci6{
+        color:var(--ci6) !important}
+      a{
+        text-decoration:none;
+        color:var(--ci3);
+      }
+      a:hover{
+        color:var(--ci4);
+      }
+      nav{
+        height:64px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        box-sizing:border-box;
+        box-shadow:0px 5px 10px #0008;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      nav .site{
+        width:4rem;
+        margin-left:1rem;
+      }
+      nav .nav-items{
+        height:100%;
+        width:calc(100% - 5rem);
+        display:flex;
+        justify-content:flex-end;
+      }
+      nav a{
+        height:100%;
+        display:inline-flex;
+        align-items:center;
+        padding:0 1em ;
+        font-weight:bold;
+        transition:all .2s;
+      }
+      nav a:hover{
+        color:white;
+        background:var(--ci2);
+      }
+      .logo{
+        font-size:2rem;
+        color:var(--ci3);
+      }
+      #header{
+        height:50vw;
+        font-size:4vw;
+        box-sizing:border-box;
+        text-align:center;
+        background-image:
+          url( https://i.imgur.com/8eIUFVg.jpg );
+  
+        background-size:cover;
+        background-position:center;
+        color:#fff9;
+        display:flex;
+        background-attachment:fixed;
+        position:relative;
+      }
+      .header-inner{
+        background-image:
+          linear-gradient(to bottom,#0004,#000c);
+        width:100%;
+        height:100%;
+        justify-content:center;
+        align-items:center;
+        display:flex;
+        flex-flow:column wrap;
+        font-family: 'Chonburi', cursive;
+      }
+      .header-inner h1,.header-inner h2{
+        margin:0;
+      }
+      .header-inner h2{
+        font-size:2em;
+        color:#fff;
+      }
+      #palette{
+        display:flex;
+        width:max-content;
+        margin:auto;
+        margin-top:-40px;
+        position:relative;
+        z-index:10;
+      }
+      .palette-color{
+        width:64px;
+        height:64px;
+        background:grey;
+        border-radius:9px;
+        margin-left:1.5em;
+        border:.5em solid #fff;
+        /*         box-sizing:border-box; */
+        box-shadow:0px 5px 10px #0002;
+      }
+      .palette-color
+      .palette-color:first-child{
+        margin:0;
+      }
+      .article{
+        max-width:900px;
+        margin:auto;
+        padding:2em;
+      }
+      .title{
+        color:var(--ci4);
+        background:var(--ci1);
+        padding:0.4em .5em;
+        display:inline-block;
+        font-size:2em;
+        font-family: 'Noto Sans Thai', sans-serif;
+        font-family: 'Chonburi', cursive;
+      }
+      .subtitle{
+        font-size:1.4em;
+        color:var(--ci2);
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .lead{
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .pic{
+        width:100%;
+        border-radius:15px;
+        box-shadow:0px 5px 10px #0005;
+        margin:1em 0 2em;
+      }
+      .hr{
+        display:block;
+        width:200px;
+        background:var(--ci5);
+        height:4px;
+        margin:auto;
+      }
+      #footer{
+        background:var(--ci3);
+        background-image:linear-gradient(to top,#0000,#0004), url( https://i.imgur.com/8eIUFVg.jpg );
+        padding:2em 1 3em;
+        color:#fffb;
+        background-blend-mode:multiply;
+        background-size:cover;
+        background-position:top center;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      #copy{
+        background:var(--ci4);
+/*         color:white; */
+        padding:1em 0;
+        text-align:center;
+        font-size:.8em;
+        font-weight:700;
+        color:white;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      .social{
+        font-size:2em;
+      }
+      .caption{
+        text-align:center;
+        font-style:italic;
+        color:var(--ci3);
+        margin-bottom:2em;
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+      blockquote {
+        margin: 2em;
+        background: #f4f5f5;
+        padding: 1em;
+        font-size: 1.3em;
+        border-left: 10px solid var(--ci1);
+        font-family: 'Noto Sans Thai', sans-serif;
+      }
+    </style>
+</head>
+<body>
+<nav>
+<div class="site">
+<i class="fas fa-school logo">
+</i>
+</div>
+<div class="nav-items">
+<a href="#!">Home
+</a>
+<a href="#!">Blog
+</a>
+<a href="#!">About
+</a>
+<a href="#!">Join us
+</a>
+</div>
+</nav>
+<section id="header">
+<div class="header-inner">
+<h1>
+La La Land
+</h1>
+<h2 style="font-weight:200">
+Multimedia 2021
+</h2>
+</div>
+</section>
+<section id="palette">
+<div class="palette-color bg-ci1">
+</div>
+<div class="palette-color bg-ci2">
+</div>
+<div class="palette-color bg-ci3">
+</div>
+<div class="palette-color bg-ci4">
+</div>
+<div class="palette-color bg-ci5">
+</div>
+<div class="palette-color bg-ci6">
+</div>
+</section>
+<section class="article">
+<h2 class="title">
+ปฏิญญาสากลว่าด้วยสิทธิมนุษยชน
+</h2>
+<p class="lead cl-ci4">
+<b>สมัชชาใหญ่แห่งสหประชาชาติชึ่งประกอบด้วยสมาชิกประเทศต่างๆ ได้ลงมติรับรองและประกาศใช้ปฏิญญาสากลว่าด้วยสิทธิมนุษยชน
+</b> เพื่อเป็นหลักการสำคัญในการคุ้มครองสิทธิมนุษยชนของประชาคมโลกเมื่อวันที่ 10 ธันวาคม พ.ศ.2491 ณ กรุงปารีส ประเทศฝรั่งเศส และถึงแม้ว่าปฏิญญาฉบับนี้จะไม่ใช่สนธิสัญญาระหว่างประเทศแต่ก็จัดเป็นกฎหมายจารีตระหว่างประเทศด้านสิทธิมนุษยชนที่สำคัญที่สุด ซึ่งประเทศต่างๆ จำต้องเคารพต่อหลักการสิทธิมนุษยชนที่ได้ตราไว้ในปฏิญญาฉบับนี้ โดยที่ปฏิญญาฉบับนี้ยังเป็นพื้นฐานสำคัญของสนธิสัญญาหรือกฎหมายระหว่างประเทศด้านสิทธิมนุษยชนอื่นๆอีกหลายฉบับ รวมทั้งกติการะหว่างประเทศว่าด้วยสิทธิพลเมืองและสิทธิทางการเมืองและกติการะหว่างประเทศว่าด้วยสิทธิทางเศรษฐกิจสังคมและวัฒนธรรม
+</p>
+<h4 class="subtitle">
+คำปรารภ
+</h4>
+<p>
+<b>แฟกซ์ยูวีโค้ช
+</b> ฮาโลวีน แฟนซีช็อปโต๊ะจีนชินบัญชร หน่อมแน้มซูเอี๋ยอพาร์ทเมนต์หงวน ตุ๊กตุ๊ก รุมบ้าวอล์กรวมมิตรแทงกั๊ก ฮ็อตพฤหัสพันธุวิศวกรรมเพรียวบาง พะเรอดีพาร์ตเมนท์มินต์โบตั๋น พรีเมียร์คอลเล็กชั่น ไหร่ ป่าไม้โบรกเกอร์ฮ็อตควีนโครนา แคมป์แป๋ว มั้ง ฟินิกซ์ จิตเภทไวอากร้าบู๊โลโก้ เซลส์
+</p>
+<img src=" https://i.imgur.com/8eIUFVg.jpg " class="pic">
+<div class="caption">
+La La Land is a 2016 American musical film written and directed by Damien Chazelle.
+</div>
+<p>
+<b>บูมคาราโอเกะแอ๊บแบ๊วเอ็นทรานซ์เมจิก
+</b> ฮ็อตด็อกคอนแทค บาบูนทอร์นาโด คาวบอย ฮาลาลวาซาบิซาบะโปรเจ็กเตอร์ ตาปรือภูมิทัศน์เทคโนแครตเคอร์ฟิว ซัมเมอร์เทรลเลอร์ ดีไซน์สเตชัน สหัสวรรษ เอ็นจีโอซัมเมอร์เก๊ะเมจิก สมิติเวชเรซิ่นไวอากร้านินจา ท็อปบู๊ทอุด้งพันธุวิศวกรรมดิกชันนารีแอดมิชชั่น ผลักดันแพ็คแหม็บฮ็อตด็อก ดีกรีลอร์ดอ่วมซูชิไอซียู เฟรมวีไอพีเดี้ยงแอดมิสชัน ก่อนหน้าบอยคอตต์บ๊อบราเม็ง
+</p>
+<p>
+การันตีโหงว เทคโนแฟลช โลโก้ปัจเจกชนถ่ายทำหมิงโฟม แทงโก้ วันเวย์สันทนาการแก๊สโซฮอล์ สเตเดียมจูน จุ๊ยคาปูชิโน ออสซี่เบอร์เกอร์ฮาโลวีน คอมเพล็กซ์ เจ๊ดีลเลอร์มั้งมหภาค ฟาสต์ฟู้ดมาร์จินซีเรียส โพลารอยด์ชีสเห็นด้วย คอร์ส บอกซ์นายพรานเก๊ะ เดี้ยงหลวงตาปิโตรเคมีง่าวซูม แฟนซีดิกชันนารีแจ็กเก็ตซิมโฟนีมุมมอง
+</p>
+<div class="hr">
+</div>
+<p>
+มัฟฟินไฮเปอร์โฟนไฟแนนซ์โค้ช แอ็กชั่น ซัพพลายวาไรตี้อุเทนเบนโตะ เอ็นทรานซ์มอลล์ อาร์พีจีบาร์บี้ โปรโมเตอร์ เป็นไงฟอร์ม แฟล็ต หม่านโถวภคันทลาพาธ โปสเตอร์แซลมอนแบคโฮแจ็กเก็ต โลชั่น อิกัวนาเป่ายิงฉุบเทคโนแครตแผดเผา ไลฟ์โอเวอร์ยาวี แจ๊กพ็อตนอร์ทกรุ๊ป บูมโอเคดีพาร์ตเมนต์เทคโนแครตเพรียวบาง สวีทเดชานุภาพ
+</p>
+<p>
+เห็นด้วยซิลเวอร์เซฟตี้ชาร์จ วิกโปรโมทง่าวรามเทพ โรแมนติกบอยคอตแคมป์คลับยิว ฮ็อตอาร์ติสต์จิตเภท ไคลแมกซ์ โกเต็กซ์ซาตานซิมสปายหลวงพี่ อาร์ติสต์รีทัช ตัวตนยาวีโอวัลติน โซนี่เพลซบัลลาสต์ จูเนียร์เปเปอร์ เลดี้ฟลุกเห็นด้วยคอนเซปต์ภูมิทัศน์ พิซซ่าวอเตอร์สามช่า แยมโรลไอติมช็อป กิฟท์มะกันรุมบ้าเซอร์ไพรส์ ยูวีเกรดบาบูนฮิ เที่ยงวันแมชีนคลับสเต็ปคลับ
+</p>
+<div class="hr">
+</div>
+<blockquote>
+<b>ทุกคนเกิดมาเท่าเทียม
+</b>
+<br>
+มนุษย์ทั้งปวงเกิดมามีอิสระและเสมอภาคกันในศักดิ์ศรี และสิทธิ ต่างในตนมีเหตุผลและมโนธรรม และควรปฏิบัติต่อกันด้วยจิตวิญญาณแห่งภราดรภาพ
+</blockquote>
+</section>
+<footer id="footer">
+<div class="article">
+<h3>
+Episteme.in.th
+</h3>
+<p>
+ฮาโลวีน แฟนซีช็อปโต๊ะจีนชินบัญชร
+<br>
+หน่อมแน้มซูเอี๋ยอพาร์ทเมนต์หงวน ตุ๊กตุ๊ก
+<br>
+แยมโรลไอติมช็อป
+</p>
+<div class="social">
+<i class="fab fa-facebook-square">
+</i>
+<i class="fab fa-twitter">
+</i>
+<i class="fab fa-instagram">
+</i>
+</div>
+</div>
+</footer>
+<footer id="copy">
+64070103 เฮฟเว่น-วิภูภัทร์
+</footer>
+</body>
+</html>

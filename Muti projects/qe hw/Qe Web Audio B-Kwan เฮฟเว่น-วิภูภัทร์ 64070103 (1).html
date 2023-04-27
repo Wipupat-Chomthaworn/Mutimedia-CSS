@@ -1,0 +1,81 @@
+<button onclick="osci.start()">
+  First Time
+</button>
+<button onclick="gain.disconnect(audio.destination)">Disconnect!</button>
+<button onclick="gain.connect(audio.destination)">Connect!!</button>
+<span>Frequency :</span>
+<input type="range" id="fre" max="2200" min="100" value="100" oninput="changefre(this.value)">
+<span>Gain :</span>
+<input type="range" id="gaint" max="100" min="0" value="1" oninput="changegain(this.value)">
+<select id="wave" oninput="chwave(value)">
+  <option value="sine">sine</option>
+  <option value="square">square</option>
+  <option value="sawtooth">sawtooth</option>
+  <option value="triangle" >triangle</option>
+</select><span>Wave!</span>
+<div>
+  <span>Freq now = <span id="freq">100</span> Hz</span>
+</div>
+<div>
+  <span>Gain now = <span id="Gain">100</span>%</span>
+</div>
+<div>
+  <span>Wave Form! = <span id="Wave">sine</span></span>
+</div>
+<div>
+     <span> B-Kwan </span> 64070103 เฮฟเว่น - วิภูภัทร์ ชมถาวร
+</div>
+<style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Prompt:wght@300;400;700&display=swap');
+  button,body,select{
+font-family: 'Open Sans', sans-serif;
+font-family: 'Prompt', sans-serif;
+  }
+</style>
+
+<!-- "gain.disconnect(audio.destination)" -->
+<script>
+  audio = new (window.AudioContext || window.webkitAudioContext)()
+  //สร้าง osci กับ gain
+  osci = audio.createOscillator()
+  gain = audio.createGain()
+  // var gaint = document.getElementById(gaint).value;
+  //เชื่อม osci->gain->audio destination
+  osci.connect(gain)
+  gain.connect(audio.destination) //เชื่อม
+  function chwave(ele){
+    // let ele = ele;
+    Wave.innerText = ele;
+    osci.type = ele;
+console.log(ele)
+  }
+  function changefre(ele){
+    ele = parseInt(ele)
+    osci.frequency.value = ele
+    freq.innerText = ele
+	console.log(ele)
+  }
+  function changegain(ele){
+    Gain.innerText = ele
+    ele = parseInt(ele)
+    ele = ele/100
+    gain.gain.value = ele
+    
+	console.log(ele)
+  }
+  function changegain(ele){
+    Gain.innerText = ele
+    ele = parseInt(ele)
+    ele = ele/100
+    gain.gain.value = ele
+    
+	console.log(ele)
+  }
+  // osci.start()
+  
+  // osci.frequency.setValueAtTime(260,audio.currentTime)
+  // osci.frequency.value = 500 // ได้ผลเหมือนข้างบน โดยจะเปลี่ยนทันที
+  
+  // osci.type = 'sine'
+  // osci.disconnect(audio.destination)
+  // gain.gain.value = 0
+</script>
