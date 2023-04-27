@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="script_1.js"></script>
+    <link rel="stylesheet" type="text/css" href="file_css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/role.css" type="text/css">
+    <link rel="stylesheet" href="../css/responsive_role.css">
+    <title>Role of Game</title>
+</head>
+<body>
+    <div class="main">
+        <a href="../index.html" class="back" onmouseover="sound()">Back</a>
+        <div class="block">
+            <h1 class="title">Control</h1>
+            <img class="role-img-1" src="../static/3.1.png"/>
+        </div>
+        <div class="block">
+            <h1 class="title">Play Off</h1>
+            <img class="role-img" src="../static/1.png"/>
+            <p class="subTitle">ผู้เล่นต้องหาทางพาดอกเตอร์วานรซีซ่าขึ้นไปบนดวงจันทร์ โดยผู้เล่นจะต้องเก็บชิ้นส่วนของยานอวกาศที่กระจัดกระจายอยู่ภายในศูนย์วิจัยมาประกอบเข้าด้วยกัน ถ้าผู้เล่นสามารถพาดอกเตอร์วานรซีซ่าขึ้นไปบนดวงจันทร์ได้จะสามารถดูรายละเอียดของ Space Race ได้</p><br/>
+            <p class="subTitle">เมื่อต้องการปล่อยยานให้ผู้เล่นกดปุ่ม E ที่รูปภาพด้านล่างเพื่อปล่อยยาน</p>
+            <img class="role-img-3" src="../static/Screen Shot 2565-05-23 at 08.57.45.png"/>
+        </div>
+        <div class="block">
+            <h1 class="title">Obstacle</h1>
+            <img class="role-img-3" src="../static/2.png"/>
+            <p class="subTitle">อุปสรรคของเกมนี้คือ หากผู้เล่นถูกหมาโซเวียตตีพลังจะลดลงหากถูกตีจนพลังหมดหลอดผู้เล่นจะตายและเกมจะจบทันทีเมื่อจบเกมผู้เล่นสามารถเริ่มเกมใหม่ได้</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    function sound() {
+        audio = new (window.AudioContext || window.webkitAudioContext)()
+        osci = audio.createOscillator()
+        gain = audio.createGain()
+        osci.connect(gain)
+        gain.connect(audio.destination)
+        let time = audio.currentTime
+        let note_osci = audio.createOscillator()
+        let note_gain = audio.createGain()
+        note_osci.connect(note_gain)
+        note_gain.connect(audio.destination)
+        note_osci.frequency.value = 698
+        note_osci.start()
+        note_gain.gain.setValueCurveAtTime([0.1, 0], time, .1)
+    }
+</script>

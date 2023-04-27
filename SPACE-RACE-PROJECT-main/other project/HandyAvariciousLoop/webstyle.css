@@ -1,0 +1,617 @@
+/* -------------------------------------page---------------------------------- */
+html, body {
+  overflow-x: visible;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  scroll-snap-points-y: repeat(100px);
+  scroll-snap-type: y proximity;
+  z-index: -999;
+}   
+.page {
+  text-align: center;
+  font-size: 1rem;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: #010101;
+  scroll-snap-align: start;
+  z-index: -999;
+}
+
+.pageexit {
+  text-align: center;
+  font-size: 1rem;
+  display: block;
+  height: 40%;
+  width: 100%;
+  position: relative;
+  background: #010101;
+  scroll-snap-align: start;
+}
+
+.timecontainer {
+  display: inline-flex;
+  width: 15%;
+  height: 19%;
+/*   background: gray; */
+}
+.time {
+  margin: auto;
+  display: inline-flex;
+}
+#tbox {
+  background:#3d3d3d;
+  border-radius: 6px;
+  margin: 2px;
+  font-size: 5vw;
+  width:3vmax;
+}
+#page3 {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/e/e4/StarfieldSimulation.gif');
+  background-size: cover;
+}
+#page4 {
+  background: #010A2D;
+}
+#page7 {
+  background: #010A2D;
+}
+#page13{
+  background-image:url('https://media.discordapp.net/attachments/956540505792073778/977577471065063464/unknown.png?width=1247&height=702');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#page13-5 {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/e/e4/StarfieldSimulation.gif');
+  background-size: cover;
+}
+
+
+#Footepage {
+  background: #010101;
+  width: 100%;
+  height: 50%;
+  padding-top:100px;
+}
+#logocontainer {
+  padding-left: 9%;
+  width: 100%;
+  height: 50%;
+  display: inline-flex;
+  left: 5%;
+  margin: auto;
+}
+#footer {
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  padding-top: 5%;
+}
+
+/* -------------------------------------page---------------------------------- */
+
+
+
+
+
+
+
+/* -------------------------------------pic------------------------------------ */
+#logo1 {
+  margin: auto 0;
+    width: 5%;
+    height: 36%;
+    transform: scale(1);
+}
+#logo2 {
+  margin: auto 0;
+    width: 17%;
+    height: 46%;
+    transform: scale(1);
+}
+#picp1 {
+  background-image: url('https://ecdn5.wn.com/ph/img/bc/46/c4e212cdd80a5aa3b3b7617ee078-large.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 90%;
+  height: 100%;
+}
+
+#picp2 {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/ISS-62_Moon_above_North_America_%281%29.jpg/2560px-ISS-62_Moon_above_North_America_%281%29.jpg');
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 80%;
+  z-index: -111;
+  background-size: cover;
+}
+#picp4 {
+  background-image : url('https://media.discordapp.net/attachments/956540505792073778/970706549947375656/ISS_Model_png_white-01.png?width=1191&height=670');
+  position:absolute;
+  top:0px;
+  left:10%;
+  height: 100%;
+  width: 80%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#picp5 {
+  background-image: url('https://media.discordapp.net/attachments/956540505792073778/978648001411158096/unknown.png') ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  right: 0;
+  bottom: 0;
+}
+
+#picp61 {
+  background-image: url('https://media.discordapp.net/attachments/519861660203220993/977834423645007892/unknown.png?width=899&height=671') ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  left: 0;
+  bottom: 0;
+}
+
+/* #picp62 {
+  background-image: url('https://media.discordapp.net/attachments/519861660203220993/969622097066332230/assds.png?width=906&height=670') ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  left: -1%;
+  bottom: 1%;
+} */
+
+#pic9 {
+  background-image: url('https://naked-science.ru/wp-content/uploads/2019/03/images_custom_2019_03_7.jpg') ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  left: 0;
+  bottom: 0;
+}
+#pic10 {
+  background-image: url('https://cdn.discordapp.com/attachments/956540505792073778/971770081937850438/unknown.png') ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: 90%;
+  height: 65%;
+  left: 100%;
+  top: 12%;
+}
+#pic11{
+  background-image: url('https://media.discordapp.net/attachments/956540505792073778/971797764444930158/unknown.png') ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  left: 0%;
+  bottom: 0%;
+/*   transform: scale(0.9); */
+}
+#pic13{
+  background-image: url('https://spaceth.co/wp-content/uploads/2020/05/sleep.png') ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 80%;
+  top: 7%;
+}
+
+#pic14 {
+  background-image: url('https://cdn.discordapp.com/attachments/956540505792073778/971787705233063936/giphy.gif') ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  height: 80%;
+  width: 50%;
+  left: 15%;
+  bottom: 10%;
+  transform:scale(0.9);
+  opacity:(0.1);
+}
+/* -------------------------------------pic------------------------------------ */
+
+
+
+
+
+
+
+
+/* -------------------------------------qoute---------------------------------- */
+.header {
+  font-size: 3vw;
+  position: absolute;
+  top: 40%;
+  right: 10%;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  z-index: 99;
+}
+
+#blue {
+  color:#81f7ff;
+}
+#red{
+  color:#FF5C5C;
+}
+
+.q-set {
+  position: absolute;
+  margin-left: 0;
+  margin-right: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.q-size-n {
+  font-size: 1.2vw;
+  color:white ;
+}
+.q-size-m {
+  font-size: 1.3vw;
+}
+.q-size-h {
+  font-size: 2vw;
+}
+.q-size-l {
+  font-size: 3vw;
+}
+.q-size-ul {
+  font-size: 3.3vw;
+}
+
+.qoute {
+  color:white ;
+}
+
+#qoute1 {
+  display: flex;
+  position: absolute;
+  top: 55%;
+  left: 65%;
+  width: fit-content;
+}
+#qoute2 {
+  position: absolute;
+  top: 25%;
+}
+#qoute3 {
+  position: absolute;
+  top:30%;
+}
+#day {
+  font-size: 10rem;
+}
+#qoute4 {
+  position: absolute;
+  top: 5%;
+}
+#sharpword {
+  position: absolute;
+  bottom: 10% ;
+}
+
+#qoute5 {
+  position: absolute;
+  text-align:left;
+  width: 50%;
+  height: 80%;
+  left: 0;
+  bottom: 0;
+  margin-left: 2%;
+}
+
+#qoute6 {
+  position: absolute;
+  text-align:left;
+  width: 45%;
+  height: 80%;
+  left: 55%;
+  bottom: 0;
+}
+#wps {
+  width: 50%;
+  text-align:right;
+}
+
+#qoute7 {
+  position: absolute;
+  text-align: center;
+  top: 40%;
+}
+#qoute8 {
+  position: absolute;
+  text-align:left;
+  width: 50%;
+  height: 80%;
+  left: 2%;
+  bottom: 0;
+}
+
+#qoute9 {
+  position: absolute;
+  text-align:left;
+  width: 45%;
+  height: 80%;
+  left: 55%;
+  bottom: 0;
+}
+#qoute10 {
+  position: absolute;
+  text-align:left;
+  width: 50%;
+  height: 80%;
+  left: 0;
+  bottom: 0;
+  margin-left: 2%;
+}
+#qoute11 {
+  position: absolute;
+  text-align:left;
+  width: 40%;
+  height: 80%;
+  left: 55%;
+  bottom: 0;
+  margin-right: 2%;
+}
+#qoute13 {
+  position: absolute;
+  text-align:left;
+  width: 50%;
+  height: 80%;
+  left: 0;
+  bottom: 0;
+  margin-left: 2%;
+}
+#qoute13-5 {
+  position: absolute;
+  top: 45vh;
+  left: 13vw;
+} 
+
+#qoute14 {
+  position: absolute;
+  text-align:left;
+  width: 40%;
+  height: 50%;
+  left: 60%;
+  top: 40%;
+}
+
+.Thai{
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+.Eng{
+  font-family: 'Rubik', sans-serif;
+}
+ h1, h2, h3{
+    margin: 0;
+  }
+p{
+  line-height: 80%;
+}
+#headfood-page6{
+  position: absolute;
+  left: 900px;
+  top: 300px;
+}
+pre{
+  margin: 0 0;
+}
+/* -------------------------------------qoute---------------------------------- */
+
+
+
+
+
+/*-----------------------------rect-------------------------------------------- */
+/*  #rectangle_page5 {
+    position: fixed;
+    top: 54px;
+    left: 75px;
+    width: 70px;
+    height: 4px;
+    background: white;
+  }
+ #rectangle_page9 {
+     position: static;
+    top: 300px;
+    left: 70%;
+    width: 70px;
+    height: 4px;
+    background: white;
+  }
+ #rectangle_page10 {
+     position: static;
+    top:  85px;
+    right: 76%;
+    width: 70px;
+    height: 4px;
+    background: white;
+  }
+ #rectangle_page11 {
+     position: static;
+    top: 273px;
+    left: 62%;
+    width: 70px;
+    height: 4px;
+    background: white;
+  } */ 
+/*   #rectangle_page12 {
+     position: static;
+    top:  110px;
+    right: 77%;
+    width: 70px;
+    height: 4px;
+    background: white;
+  } */
+/*  #rectangle {
+    position: absolute;
+    top: 750px;
+    right: 200px;
+    width: 280px;
+    height: 8px;
+    background: white;
+  }
+  #rectangle1 {
+    position: absolute;
+    top: 790px;
+    right: 220px;
+    width: 280px;
+    height: 8px;
+    background: white;
+  }
+  #rectangle2 {
+    position: absolute;
+    top: 830px;
+    right: 240px;
+    width: 280px;
+    height: 8px;
+    background: white;
+  } */
+/*-----------------------------rect-------------------------------------------- */
+
+
+
+/* ----------------------------------page8--------------------------------------- */
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1100px;
+  position: relative;
+  width: 50%;
+  height: 10%;
+  margin: auto;
+  left: 23vw;
+}
+
+/* Next & previous buttons */
+.prev, .next{
+  top: 700%;
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev{
+  right: 50%;
+}
+
+.next {
+  left: 50%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+#text-slider{
+  position: absolute;
+  color: white;
+  left: 100px;
+  top: 200px;
+}
+
+#b111 {
+  
+/*   width: 10px;
+  height: 20px;
+  border-radius: 50%;
+  background: white; */
+  position: absolute;
+  left: 43%;
+  top: -10%;
+  z-index: 10;
+  
+}
+#b112 {
+  
+/*   width: 10px;
+  height: 20px;
+  border-radius: 50%;
+  background: white; */
+  position: absolute;
+  top: -10%;
+  left: 53%;
+  z-index: 10;
+  
+}
+/* -----------------------------------endpage8--------------------------------- */
+

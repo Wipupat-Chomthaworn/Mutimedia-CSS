@@ -1,0 +1,318 @@
+html {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+body{
+  background: #000;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: visible;
+  width: 1920px;
+  height: 1080px;
+} 
+
+#Thai{
+  font-family: 'Noto Sans Thai', sans-serif;
+  color: white;
+}
+#Eng{
+  font-family: 'Rubik', sans-serif;
+  color: white;
+}
+
+.page{
+  background:black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+/*   background-position: center; */
+  width: 100%;
+  height: 100%;
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  border: 0px;
+  scroll-snap-align: start;
+}
+
+/* หน้า1 */
+.page_1{
+  background-image: url('https://cdn.discordapp.com/attachments/929983498108932118/966905510475493376/iss2.png');
+  background-size: 1920px 1080px;
+  position: relative;
+  align-items:center;
+  scroll-snap-align: start;
+}
+
+/* หน้า2 */
+.page_2{
+  background-image:url('https://media.discordapp.net/attachments/437266516900184075/969651039559110696/eart.jpg?width=906&height=604');
+  background-size: 1920px 1080px;
+  align-items:center;
+  border-style: solid;
+  border-color: red;
+  border-width: 5px;
+  scroll-snap-align: start;
+
+}
+
+.page_2 #Thai{
+  border-style: solid;
+  border-color: red;
+  border-width: 5px;
+  transform: translateY(-80px);
+  
+}
+.page_2 #Eng{
+  border-style: solid;
+  border-color: red;
+  border-width: 5px;
+  transform: translateY(-80px);
+  
+}
+/* หน้า 3 */
+.page_3{
+  background:#010A2D;
+  scroll-snap-align: start;
+}
+.clock{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.timezone{
+/*   border: solid 6px; */
+  font-size:100px;
+  margin:0;
+}
+.hours{
+  width:28%;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.minutes{
+  width:28%;
+  margin:0px 4em;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.seconds{
+  width:28%;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+.iniss {
+  font-size: 80px;
+}
+.iniss2 {
+  font-size: 40px;
+}
+
+/* หน้า 4 */
+.page_4{
+  background:#010A2D;
+  scroll-snap-align: start;
+}
+/* หน้า 5 */
+.page_5{
+/*   background: white; */
+  align-items: end;
+  scroll-snap-align: start;
+}
+#rectangle_page5 {
+  position: absolute;
+  top: 70px;
+  right: 80%;
+  width: 60px;
+  height: 4px;
+  background: white;
+}
+#rectangle_page6 {
+  position: absolute;
+  top: 70px;
+  right: 10% ;
+  width: 60px;
+  height: 4px;
+  background: white;
+}
+.box{
+  position: relative;
+}
+#text{
+  width: 50%;
+  height: 80%;
+  text-align:left;
+  padding-left:60;
+/*   padding-bottom:100; */
+  font-size:23px;
+  border: red solid;
+  
+}
+#text1{
+  width: 50%;
+  height: 80%;
+  text-align:left;
+/*   padding-left:60; */
+/*   padding-bottom:100; */
+  font-size:23px;
+  border: red solid;
+  
+}
+#texthead{
+  font-family: 'Noto Sans Thai', sans-serif;
+  color: white;
+  width: 10%;
+  text-align:left;
+  padding-left:50;
+  font-size:40;
+}
+#picp51{
+  width: 50%;
+  height: 80%;
+  background-image:url('https://media.discordapp.net/attachments/956540505792073778/965585922139758662/unknown.png') ;
+  background-size: cover ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: 0%;
+  bottom: 0%;
+}
+/* หน้า 6 */
+.page_6{
+  position: relative;
+  align-items: end;
+  border-style: solid;
+  border-color: red;
+  border-width: 5px;
+  scroll-snap-align: start;
+}
+.boxpg5{
+  position: relative;
+  left: 500px;
+}
+#picp61 {
+  background-image:url("https://media.discordapp.net/attachments/519861660203220993/969622097066332230/assds.png?width=906&height=670") ;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  width: 50%;
+  height:80%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}  
+#picp62 {
+  background-image: url("https://media.discordapp.net/attachments/519861660203220993/969622097800331274/fesfsfdsfde.png?width=971&height=670");
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  width: 50%;
+  height: 80%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+/* หน้า 7 */
+.page_7{
+  position: relative;
+  background:#010A2D;
+  scroll-snap-align: start;
+}
+.highlight{
+  color:#81F7FF;
+  font-size: 1.5em;
+}
+#rectangle {
+  position: absolute;
+  top: 750px;
+  right: 200px;
+  width: 280px;
+  height: 8px;
+  background: white;
+}
+#rectangle1 {
+  position: absolute;
+  top: 790px;
+  right: 220px;
+  width: 280px;
+  height: 8px;
+  background: white;
+}
+#rectangle2 {
+  position: absolute;
+  top: 830px;
+  right: 240px;
+  width: 280px;
+  height: 8px;
+  background: white;
+}
+.hl2{
+  color: #81f7ff;
+}
+.hl3{
+  color: #81f7ff;
+  font-size:44;
+}
+.mediumsize{
+  font-size:24;
+  text-align:left;
+  padding-left:200;
+}
+/* หน้า 8 */
+.page_8{
+  scroll-snap-align: start;
+}
+.hl8{
+  font-size:20px;
+  color:#81f7ff;
+}
+
+
+/* หน้า 9 */
+.page_9{
+  scroll-snap-align: start;
+  
+}
+.big9{
+  font-size:33px;
+}
+.hl9{
+  color:#81f7ff;
+}
+.head9{
+  color:#81f7ff;
+}
+
+/* หน้า 10 */
+.page_10{
+  scroll-snap-align: start;
+}
+.time {
+  color: white;
+  margin:0;
+  position: relative;
+  justify-content: center;
+  text-align:center;
+  transition: 1s all ease;
+}
+h1, h2{
+  margin: 0;
+}
+.eng{
+  margin-bottom : 3vh;
+}
+.iss{
+  color: white;
+  margin:0;
+  position: relative;
+  justify-content: center;
+  text-align:center;
+  transition: 1s all ease;
+  padding-bottom: 200;
+}
