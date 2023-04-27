@@ -1,0 +1,413 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&family=Sriracha&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap"
+      rel="stylesheet"
+    />
+    <title>PORTFOLIO</title>
+    <style>
+      body {
+        --backg: hsl(216, 41%, 27%);
+        --org: hsl(11, 63%, 48%);
+        --yellowdec: hsl(40, 56%, 83%);
+        --black: hsl(0, 0%, 7%);
+        --purple: hsl(275, 46%, 29%);
+        --white: hsl(275, 46%, 100%);
+        --fs:25px;
+        background: var(--backg);
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-family: sans-serif;
+        color: var(--white);
+        font-family: "IBM Plex Sans Thai Looped", sans-serif;
+        overflow: hidden;
+        overflow: auto;
+      }
+      body[data-color="1"] {
+        --backg: hsl(216, 41%, 27%);
+        --org: hsl(11, 63%, 48%);
+        --yellowdec: hsl(40, 56%, 83%);
+        --black: hsl(0, 0%, 7%);
+        --purple: hsl(275, 46%, 29%);
+        --white: hsl(275, 46%, 100%);
+        --fs:25px;
+
+        background: var(--backg);
+        margin: 0;
+        font-family: sans-serif;
+        color: var(--white);
+        font-family: "Oswald", sans-serif;
+        /* overflow: hidden; */
+        overflow: auto;
+      }
+      body[data-color="-1"] {
+        --backg: #eeeee4;
+        --org: #eab676;
+        --yellowdec: #1e81b0;
+        --black: hsl(0, 0%, 7%);
+        --purple: hsl(275, 46%, 29%);
+        --white: #2c1c15;
+        --fs:25px;
+
+        background: var(--backg);
+        margin: 0;
+        font-family: sans-serif;
+        color: var(--white);
+        font-family: "Oswald", sans-serif;
+        overflow: auto;
+      }
+
+      a:hover {
+        color: hsl(0, 0%, 100%);
+      }
+      nav {
+        position: relative;
+        height: 12%;
+        width: 100%;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+        box-shadow: 0px 5px 20px #0008;
+      }
+      button {
+        background-color: var(--backg);
+        border-width: 0;
+        font-size: 25px;
+      }
+
+      nav .nav-box {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+      }
+      nav a,
+      button {
+        text-decoration: none;
+        color: var(--yellowdec);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 1em;
+        font-weight: bold;
+        transition: all 0.5s;
+      }
+      button {
+        transition: all 0.3s;
+      }
+      nav a:hover,
+      button:hover {
+        color: white;
+        transform: scale(1.1);
+        background: var(--org);
+      }
+      #namenav {
+        width: 50%;
+        padding-left: 1.5em;
+        font-size: 30px;
+        margin: auto;
+      }
+      #mainti {
+        font-family: "Dancing Script", cursive;
+        color: var(--yellowdec);
+        font-size: 150px;
+        text-align: center;
+        justify-content: center;
+
+        animation: glow 2s linear infinite alternate;
+      }
+      #mainti:hover {
+        transition: 1.5s;
+        transform: scale(1.2);
+      }
+      @keyframes glow {
+        from {
+          text-shadow: 2px 1px 0px hsl(0, 0%, 0%);
+        }
+        to {
+          text-shadow: 6px 5px 4px hsl(49, 90%, 51%);
+        }
+      }
+      #subti {
+        font-family: "Dancing Script", cursive;
+        color: var(--yellowdec);
+        font-size: 75px;
+        text-align: center;
+        justify-content: center;
+      }
+      #tinav {
+        left: 50%;
+        font-family: "Dancing Script", cursive;
+        color: var(--yellowdec);
+      }
+      .allprofile {
+        position: relative;
+        width: 100%;
+        height: 40%;
+        overflow: hidden;
+      }
+      .profile {
+        position: relative;
+        width: 100%;
+        justify-items: center;
+        text-align: center;
+        margin: auto;
+      }
+
+      .pname {
+        position: relative;
+        width: 50%;
+        text-align: center;
+        height: 20rem;
+        margin: auto;
+        color: var(--white);
+      }
+
+      .evaall {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+      .eva,
+      .enc {
+        font-family: "Noto Sans Thai", sans-serif;
+        text-align: center;
+        font-size: var(--fs);
+        color: var(--white);
+      }
+      .enc {
+        text-align: center;
+        width: 70%;
+        height: 15em;
+        margin: auto;
+        justify-content: center;
+        position: relative;
+        color: var(--white);
+      }
+
+      .social {
+        position: relative;
+        width: 10vh;
+        height: auto;
+        color: rgb(255, 255, 255);
+      }
+            .fa {
+              justify-content: center;
+              color:var(--white);
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        /* margin: 5px 2px; */
+      }
+      .fa:hover{
+        color: yellowgreen;
+        animation: move 0.5s 0s linear infinite alternate;
+      }
+      @keyframes move{
+        0%{transform: scale(1.2) rotate(0deg);}
+        50%{transform: scale(1.2) rotate(-5deg);}
+        100%{transform: scale(1.2) rotate(5deg);}
+
+      }
+      .linebar {
+        position: relative;
+        margin: auto;
+        left: calc(40% - 40em);
+        width: 80em;
+        height: 5rem;
+        justify-content: center;
+        /* background-color: var(--org); */
+      }
+      .linebarorg {
+        position: relative;
+        margin: auto;
+        left: calc(35% - 40em);
+        width: 80em;
+        height: 5rem;
+        justify-content: center;
+        background-color: var(--org);
+      }
+      .bar {
+        position: relative;
+        margin: auto;
+        left: calc(35% - 40em);
+        width: 80em;
+        height: 50rem;
+        justify-content: center;
+        background-color: var(--purple);
+      }
+      #namefooter {
+        position: fixed;
+        width: 100%;
+        height: 3%;
+        background: var(--black);
+        padding: 1em 0;
+        text-align: center;
+        justify-content: center;
+        font-size: 1em;
+        font-weight: 700;
+        bottom: 0%;
+        left: 0%;
+        color: white;
+        font-family: "Noto Sans Thai", sans-serif;
+      }
+      #owenpic {
+        width: 25em;
+        border-radius: 20%;
+        transition: 1.5s;
+      }
+      #owenpic:hover {
+        border-radius: 60%;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body class="body">
+    <nav>
+      <div id="namenav">
+        <h1 id="tinav">Wipupat Chomthaworn</h1>
+      </div>
+
+      <div class="nav-box">
+        <a href="#main">Main </a>
+        <a href="#allprofile">Profile </a>
+        <a href="#evaall">Evaluate </a>
+        <a href="#tech">Technique use </a>
+        <button class="chtheme" type="button" onclick="changetheme()">
+          click me
+        </button>
+        <input class="chtheme" id="siz" min="15" max="40" step="1" value="25" type="range" oninput="changesize()"/>
+      </div>
+    </nav>
+    <div class="first" id="main">
+      <h1 id="mainti">Portfolio</h1>
+    </div>
+
+    <div id="allprofile">
+      <div id="profile" class="profile">
+        <image
+          id="owenpic"
+          src="https://scontent.fbkk5-4.fna.fbcdn.net/v/t39.30808-6/284603733_2354781754677544_7628706746816688633_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_eui2=AeFpJNKhewLE7UW2wt_Q0x0VineWcc9WZPmKd5Zxz1Zk-bK5KXAxkDH6aEW0PFGGuYamkCOf9kZSGm7Gbl_YW9KP&_nc_ohc=jkphMuj2-20AX8GWKna&_nc_ht=scontent.fbkk5-4.fna&oh=00_AT_ZP4F2TNcxYJlN_INvTyF_THEwIGITNzGfXy2obAzxWA&oe=6295B19B"
+        />
+      </div>
+      <div>
+        <h1 class="pname">
+          <br />
+          Name : นาย วิภูภัทร์ ชมถาวร <br />
+          <br />
+          Nickname : Owen(Heaven) <br />
+          <br />
+          Student ID : 64070103 <br />
+          <br />
+          Date of birth : 23 สิงหาคม 2546 <br />
+          <br />
+          Hobby : อ่านหนังสือ <br/>
+        </h1>
+      </div>
+    </div>
+
+    <div class="linebar"></div>
+    <div class="linebarorg"></div>
+    <br /><br />
+    <div id="evaall">
+      <h2 class="eva" id="eva">
+        <br />" 1 เทอมที่ผ่านมานั้น จากการเรียนผมได้ความรู้ในหลายๆเรื่อง
+        ไม่ว่าจะเป็นทักษะทางวิชาการ เช่น css web audio svg javascript
+        และอีกมากมาย <br />
+        <br />
+        จากเว็ปปกติๆทั่วไป ทำให้เหมือนกับว่ามันมีชีวิตชีวาขึ้นมาได้
+        และการเขียนเว็ปก็กลับกลายเป็นเรื่องสนุกไปเลยสำหรับผม <br />
+        <br />
+        ตัวอย่าง เช่น animation กับ javascript ก็สร้างลูกเล่นหลายสิ่งหลายอย่าง
+        ให้เว็ปไซต์เราเป็นไปได้ตามที่เราคิด <br />
+        <br />
+        นอกจากความรู้ที่ได้รับ ผมก็ยังได้ทักษะชีวิต ทักษะการเข้าสังคม
+        และทักษะอีกมากมายจากการเรียน <br />
+        <br />
+        ผมชอบรูปแบบการเรียนแบบนี้นะครับ ได้เรียนแบบสนุก
+        ได้ทำงานพร้อมกันกับเพื่อน ได้คำปรึกษาจากพี่ๆ สนุกมากครับ<br />
+        <br />
+        การเรียนในเทอมที่ผ่านมานี้ได้รับประสบการณ์ดีๆมากมาย และ
+        จะนำความรู้ไปปรับใช้ให้ได้มากที่สุดครับ "<br />
+      </h2>
+      <br /><br />
+      <h2 class="enc">
+        อยากให้กำลังใจตัวเองให้พยายามเรียนรู้
+        และทดลองลงมือทำเรื่องยากๆต่อไปเรื่อยๆ แม้จะมีอุปสรรคบ้าง คิดไม่ออกบ้าง
+        แต่เราก็ต้องผ่านมันไปได้
+        เพราะทักษะและความรู้ที่เราได้รับนั้นล้วนได้มาจากอุปสรรคที่เข้ามาขวางเรา
+        จนเราตั้งใจจนผ่านมันไปได้ ทุกอุปสรรคนั้นมีทางออกเสมอ
+        คิดไม่ออกก็ลองหาอะไรสนุกๆทำ แล้วกลัมมาทำงานต่อ "เราจะผ่านมันไปได้"
+      </h2>
+      <h2 class="enc" id="tech">
+        ตัวอย่างเทคนิคที่ใช้ภายใน (HSL / data-attribute / css var / js onclick , oninput / css calc() / transform / animation / hover / position)
+      </h2>
+    </div>
+    <div class="social">
+        <a href="https://www.facebook.com/owen.win.92/" class="fa fa-facebook-square"/>
+        <a href="https://www.instagram.com/owen.win.92/" class="fa fa-instagram"/>
+        <a href="https://discordapp.com/users/657927687607943188" class="fa-brands fa-discord"/>
+        <div class="linebar"></div>
+        <!-- <a href="https://github.com/Wipupat-Chomthaworn" class="fa fa-github"/> -->
+    </div>
+    <script>
+      // js
+      const val = 1;
+      const val2 = 1;
+      let value = 1;
+      let body = document.querySelector(".body");
+      function changetheme() {
+        let value2 = value * -1;
+        console.log(value2);
+        value = value2;
+        body.dataset.color = value2;
+      }
+      let ele = document.getElementById('siz')
+      function changesize(){
+        body.style.setProperty("--fs", ele.value + "px");
+        console.log("fs")
+      }
+    </script>
+  </body>
+  <footer id="namefooter">64070103 เฮฟเว่น-วิภูภัทร์ ชมถาวร</footer>
+</html>
